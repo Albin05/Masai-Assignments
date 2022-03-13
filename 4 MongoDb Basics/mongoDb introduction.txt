@@ -1,0 +1,176 @@
+Albin@DESKTOP-S60CFP7 MINGW64 ~
+$ mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("33a5d8a9-3f3a-46c7-a949-376c3b3d8aaf") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+web15   0.000GB
+use assignment
+switched to db assignment
+db.createCollection("users")
+{ "ok" : 1 }
+db.users.insert({"first_name": "Albin", "last_name": "Baby", "email": "a@gmail.com", "gender": "male", "ip_address": "133.00.94.345","age": "24"})
+WriteResult({ "nInserted" : 1 })
+db.users.insert({"first_name" : "Carl" , "last_name" : "Max" , "email" : "b@gmail.com", "gender" : "male", "ip_address" : "153.40.88.775", "age" : "90"})
+WriteResult({ "nInserted" : 1 })
+db.users.insertMany([{"first_name":"Row","last_name":"Wigginton","email":"rwigginton0@quantcast.com","gender":"Female","ip_address":"207.69.145.227","age":"55"},
+{"first_name":"Franciskus","last_name":"Crowley","email":"fcrowley1@mozilla.com","gender":"Male","ip_address":"34.251.160.235","age":"35"},
+{"first_name":"Ingaberg","last_name":"Grzelczak","email":"igrzelczak2@usnews.com","gender":"Male","ip_address":"229.114.54.48","age":"64"},
+{"first_name":"Weider","last_name":"Rops","email":"wrops3@wordpress.org","gender":"Male","ip_address":"57.52.200.14","age":"75"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("622d602d0d39c6e33a1f8ceb"),
+                ObjectId("622d602d0d39c6e33a1f8cec"),
+                ObjectId("622d602d0d39c6e33a1f8ced"),
+                ObjectId("622d602d0d39c6e33a1f8cee")
+        ]
+}
+db.users.insertMany([{"first_name":"Iolanthe","last_name":"Bosworth","email":"ibosworth4@multiply.com","gender":"Male","ip_address":"171.120.31.245","age":"34"},
+{"first_name":"Amii","last_name":"Pepi","email":"apepi5@myspace.com","gender":"Male","ip_address":"170.131.228.252","age":"75"},
+{"first_name":"Emilio","last_name":"Belchamp","email":"ebelchamp6@goo.gl","gender":"Female","ip_address":"8.67.230.0","age":"38"},
+{"first_name":"Tadeas","last_name":"Gatley","email":"tgatley7@fema.gov","gender":"Female","ip_address":"199.9.203.148","age":"25"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("622d60cba17dd4d84907983c"),
+                ObjectId("622d60cba17dd4d84907983d"),
+                ObjectId("622d60cba17dd4d84907983e"),
+                ObjectId("622d60cba17dd4d84907983f")
+        ]
+}
+db.users.find({}).pretty()
+{
+        "_id" : ObjectId("622cd9666193afdde4aace28"),
+        "first_name" : "Albin",
+        "last_name" : "Baby",
+        "email" : "a@gmail.com",
+        "gender" : "male",
+        "ip_address" : "133.00.94.345",
+        "age" : "24"
+}
+{
+        "_id" : ObjectId("622cdcd4f734db7a3bf0c4ff"),
+        "first_name" : "Carl",
+        "last_name" : "Max",
+        "email" : "b@gmail.com",
+        "gender" : "male",
+        "ip_address" : "153.40.88.775",
+        "age" : "90"
+}
+{
+        "_id" : ObjectId("622d602d0d39c6e33a1f8ceb"),
+        "first_name" : "Row",
+        "last_name" : "Wigginton",
+        "email" : "rwigginton0@quantcast.com",
+        "gender" : "Female",
+        "ip_address" : "207.69.145.227",
+        "age" : "55"
+}
+{
+        "_id" : ObjectId("622d602d0d39c6e33a1f8cec"),
+        "first_name" : "Franciskus",
+        "last_name" : "Crowley",
+        "email" : "fcrowley1@mozilla.com",
+        "gender" : "Male",
+        "ip_address" : "34.251.160.235",
+        "age" : "35"
+}
+{
+        "_id" : ObjectId("622d602d0d39c6e33a1f8ced"),
+        "first_name" : "Ingaberg",
+        "last_name" : "Grzelczak",
+        "email" : "igrzelczak2@usnews.com",
+        "gender" : "Male",
+        "ip_address" : "229.114.54.48",
+        "age" : "64"
+}
+{
+        "_id" : ObjectId("622d602d0d39c6e33a1f8cee"),
+        "first_name" : "Weider",
+        "last_name" : "Rops",
+        "email" : "wrops3@wordpress.org",
+        "gender" : "Male",
+        "ip_address" : "57.52.200.14",
+        "age" : "75"
+}
+{
+        "_id" : ObjectId("622d60cba17dd4d84907983c"),
+        "first_name" : "Iolanthe",
+        "last_name" : "Bosworth",
+        "email" : "ibosworth4@multiply.com",
+        "gender" : "Male",
+        "ip_address" : "171.120.31.245",
+        "age" : "34"
+}
+{
+        "_id" : ObjectId("622d60cba17dd4d84907983d"),
+        "first_name" : "Amii",
+        "last_name" : "Pepi",
+        "email" : "apepi5@myspace.com",
+        "gender" : "Male",
+        "ip_address" : "170.131.228.252",
+        "age" : "75"
+}
+{
+        "_id" : ObjectId("622d60cba17dd4d84907983e"),
+        "first_name" : "Emilio",
+        "last_name" : "Belchamp",
+        "email" : "ebelchamp6@goo.gl",
+        "gender" : "Female",
+        "ip_address" : "8.67.230.0",
+        "age" : "38"
+}
+{
+        "_id" : ObjectId("622d60cba17dd4d84907983f"),
+        "first_name" : "Tadeas",
+        "last_name" : "Gatley",
+        "email" : "tgatley7@fema.gov",
+        "gender" : "Female",
+        "ip_address" : "199.9.203.148",
+        "age" : "25"
+}
+db.users.find({first_name: "Albin"}).pretty()
+{
+        "_id" : ObjectId("622cd9666193afdde4aace28"),
+        "first_name" : "Albin",
+        "last_name" : "Baby",
+        "email" : "a@gmail.com",
+        "gender" : "male",
+        "ip_address" : "133.00.94.345",
+        "age" : "24"
+}
+db.users.findOne({first_name: "Tadeas"})
+{
+        "_id" : ObjectId("622d60cba17dd4d84907983f"),
+        "first_name" : "Tadeas",
+        "last_name" : "Gatley",
+        "email" : "tgatley7@fema.gov",
+        "gender" : "Female",
+        "ip_address" : "199.9.203.148",
+        "age" : "25"
+}
+db.users.update({"_id" : ObjectId("622d60cba17dd4d84907983f")}, {$set: {"religion": "Christian"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+db.users.update({"_id" : ObjectId("622d602d0d39c6e33a1f8cee")}, {$set: {"religion": "Muslim"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+db.users.updateMany({"gender": "Female"}, {$set: {"religion": "Hindu"}})
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+db.users.deleteOne({"_id" : ObjectId("622d60cba17dd4d84907983f")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+db.users.deleteMany({"religion": "Hindu"})
+{ "acknowledged" : true, "deletedCount" : 2 }
+db.dropDatabase()
+{ "ok" : 1 }
