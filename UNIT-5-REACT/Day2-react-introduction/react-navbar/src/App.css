@@ -1,0 +1,24 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.App {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  padding: 10px;
+  background-color: #24252a;
+  color: white;
+  justify-content: space-around;
+}
+.links_tags{
+  margin: 20px;
+}
+.contact{
+  background-color: #0088a6;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: 90px;
+  border-radius: 22px;
+}
