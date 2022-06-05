@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+}
+.inputbox {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+input[type="radio"] {
+  accent-color: #87ffc5;
+}
